@@ -5,6 +5,7 @@ cd ext/warp-ctc
 # git clone https://github.com/baidu-research/warp-ctc.git .
 # Temporary fix for newer GPUs. See https://github.com/espnet/espnet/issues/733
 git clone https://github.com/jnishi/warp-ctc .
+sed  -i 's/.*compute_30.*/#&/g' ./CMakeLists.txt
 mkdir build
 cd build
 cmake ../
